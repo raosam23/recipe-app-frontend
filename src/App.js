@@ -1,14 +1,15 @@
 import {useState} from 'react';
 import Form from './components/Form';
 import Title from './components/Title';
+import DishState from './context/Dish/DishState';
 
 function App() {
-  const [dishName, setDishName] = useState("");
   return (
     <>
+      <DishState>
       <Title />
-      <Form dishName = {dishName} setDishName = {setDishName} />
-      <br />
+      <Form />
+      </DishState>
     </>
   );
 }

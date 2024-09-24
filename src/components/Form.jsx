@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import Recipe from "./Recipe";
+import DishContext from "../context/Dish/DishContext";
 
-export default function Form(props) {
-  const { dishName, setDishName } = props;
-  const [showTitle, setShowTitle] = useState(false);
-  const [recipe, setRecipe] = useState({});
+export default function Form() {
+  const context = useContext(DishContext);
+  const { dishName, setDishName, setShowTitle, setRecipe } = context;
 
   const handleOnSubmit = async (event) => {
     event.preventDefault();
@@ -25,7 +25,6 @@ export default function Form(props) {
       alert(err);
       console.log(err);
     }
-
   };
 
   const handleOnChange = (event) => {
@@ -44,7 +43,7 @@ export default function Form(props) {
           />
         </label>
         <input type="submit" value="submit" />
-        <Recipe showTitle={showTitle} dishName={dishName} recipe={recipe} />
+        <Recipe />
       </form>
     </>
   );

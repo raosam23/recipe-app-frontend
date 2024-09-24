@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import DishContext from "../context/Dish/DishContext";
 
-export default function Recipe(props) {
-    const {showTitle, dishName, recipe} = props;
+export default function Recipe() {
+    const context = useContext(DishContext);
+    const {showTitle, dishName, recipe} = context;
     console.log(showTitle);
     const {meal, category, country, instructions, image, youtubeLink, ingrediants} = recipe;
     console.log(meal);
