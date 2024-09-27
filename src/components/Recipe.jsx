@@ -4,15 +4,7 @@ import DishContext from "../context/Dish/DishContext";
 export default function Recipe() {
     const context = useContext(DishContext);
     const {showTitle, dishName, recipe} = context;
-    console.log(showTitle);
     const {meal, category, country, instructions, image, youtubeLink, ingrediants} = recipe;
-    console.log(meal);
-    console.log(category);
-    console.log(country);
-    console.log(instructions);
-    console.log(youtubeLink);
-    console.log(ingrediants);
-    console.log(typeof(recipe))
   return (
     <div>
       {showTitle && (

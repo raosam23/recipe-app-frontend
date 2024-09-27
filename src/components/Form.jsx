@@ -8,7 +8,6 @@ export default function Form() {
 
   const handleOnSubmit = async (event) => {
     event.preventDefault();
-    console.log(`Data recieved : ${dishName}`);
     try {
       const dataJson = await fetch(
         `http://localhost:8000/routes/search?dishName=${dishName}`,

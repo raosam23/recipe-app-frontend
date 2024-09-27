@@ -1,14 +1,13 @@
-import {useState} from 'react';
-import Form from './components/Form';
-import Title from './components/Title';
-import DishState from './context/Dish/DishState';
+import Form from "./components/Form";
+import Title from "./components/Title";
+import DishState from "./context/Dish/DishState";
 
 function App() {
   return (
     <>
       <DishState>
-      <Title />
-      <Form />
+        <Title />
+        <Form />
       </DishState>
     </>
   );
